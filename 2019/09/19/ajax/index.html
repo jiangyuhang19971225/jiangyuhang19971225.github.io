@@ -10,6 +10,14 @@
 
     <!--Description-->
     
+        <meta name="description" content="第1章 预备知识服务器和客户端
+服务器 = 高配置硬件 + 特殊软件（能提供服务的软件）
+
+客户端= 低配置硬件 + 一般软件（能享受服务的软件）
+
+web服务器 =  高配置硬件 +能提供web服务的软件（web服务就是让和客户端能访问网页的服务）
+web请求与响应请求：客户端浏览器向web服务器">
+    
 
     <!--Author-->
     
@@ -135,17 +143,14 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">Hexo</h1>
-        
     </div>
 </header>
 
         <section class="main">
             
-                
 <div class="post">
 
-    <div class="post-header index">
+    <div class="post-header">
         <h1 class="title">
             <a href="/2019/09/19/ajax/">
                 Untitled
@@ -160,9 +165,13 @@
         </div>
     </div>
 
-    
-        <div class="content">
-            <h2 id="第1章-预备知识"><a href="#第1章-预备知识" class="headerlink" title="第1章 预备知识"></a>第1章 预备知识</h2><h3 id="服务器和客户端"><a href="#服务器和客户端" class="headerlink" title="服务器和客户端"></a>服务器和客户端</h3><ul>
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h2 id="第1章-预备知识"><a href="#第1章-预备知识" class="headerlink" title="第1章 预备知识"></a>第1章 预备知识</h2><h3 id="服务器和客户端"><a href="#服务器和客户端" class="headerlink" title="服务器和客户端"></a>服务器和客户端</h3><ul>
 <li><p>服务器 = 高配置硬件 + 特殊软件（能提供服务的软件）</p>
 </li>
 <li><p>客户端= 低配置硬件 + 一般软件（能享受服务的软件）</p>
@@ -436,57 +445,20 @@
 <li>步骤，阶段</li>
 </ul>
 
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2019/09/19/hello-world/">
-                Hello World
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2019-09-19</span>
-            
-            
-            
-        </div>
     </div>
 
     
-        <div class="content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post11"</span></span><br><span class="line">请求报文</span><br><span class="line"></span><br><span class="line">三个部分：</span><br><span class="line"></span><br><span class="line">- 请求行</span><br><span class="line">包含请求方式 和请求地址</span><br><span class="line">- 请求头</span><br><span class="line">- 请求体：本次请求带的参数</span><br><span class="line">get没有请求体；post有请求体</span><br><span class="line"></span><br><span class="line">响应报文</span><br><span class="line"></span><br><span class="line">三个部分：</span><br><span class="line"></span><br><span class="line">- 响应行</span><br><span class="line">  状态码。至少要记住5个。</span><br><span class="line">- 响应头</span><br><span class="line">- 响应体</span><br><span class="line">内容在响应体中。这里才是重点</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+    
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-        </div>
+    <!-- Comments -->
     
 
 </div>
-            
         </section>
+
     </div>
 </div>
-
-
-
-
 
 
 </div>
