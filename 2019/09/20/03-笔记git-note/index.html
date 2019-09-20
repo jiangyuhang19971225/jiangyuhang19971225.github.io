@@ -10,6 +10,25 @@
 
     <!--Description-->
     
+        <meta name="description" content="git 笔记git基本介绍作用：
+
+管理历史记录
+多人合作
+
+分布式版本管理软件
+git-bash的基本使用
+启动
+关闭
+命令
+mkdir 创建目录
+cd 切换目录
+ls 查看目录
+ls -a 查看目录，包含隐藏目录
+touch  新建文件 
+rm 删除文件 
+clear 清屏
+cat 查看文件内容">
+    
 
     <!--Author-->
     
@@ -40,7 +59,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2019/9 - Hexo</title>
+    <title>Hexo</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -127,9 +146,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -137,43 +154,200 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">2019/9</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2019/09/20/03-笔记git-note/">
-        <span class="archive-date">
-            Sep 2019
-        </span>
-        Untitled
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2019/09/20/03-笔记git-note/">
+                Untitled
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-09-20</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="git-笔记"><a href="#git-笔记" class="headerlink" title="git 笔记"></a>git 笔记</h1><h2 id="git基本介绍"><a href="#git基本介绍" class="headerlink" title="git基本介绍"></a>git基本介绍</h2><p>作用：</p>
+<ul>
+<li>管理历史记录</li>
+<li>多人合作</li>
+</ul>
+<p>分布式版本管理软件</p>
+<h2 id="git-bash的基本使用"><a href="#git-bash的基本使用" class="headerlink" title="git-bash的基本使用"></a>git-bash的基本使用</h2><ul>
+<li>启动</li>
+<li>关闭</li>
+<li>命令<ul>
+<li>mkdir 创建目录</li>
+<li>cd 切换目录</li>
+<li>ls 查看目录</li>
+<li>ls -a 查看目录，包含隐藏目录</li>
+<li>touch  新建文件 </li>
+<li>rm 删除文件 </li>
+<li>clear 清屏</li>
+<li>cat 查看文件内容</li>
+<li>方向键：切换历史命令</li>
+<li>tab: 补全</li>
+</ul>
+</li>
+</ul>
+<h2 id="git的基本流程"><a href="#git的基本流程" class="headerlink" title="git的基本流程"></a>git的基本流程</h2><ul>
+<li><ol>
+<li>初始git仓库</li>
+</ol>
+<ul>
+<li><code>git init</code></li>
+<li>自动创建一个隐藏目录”.git”</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><ol start="3">
+<li>把文件添加到git</li>
+</ol>
+<ul>
+<li>git add 文件名.后缀名</li>
+</ul>
+</li>
+<li><ol start="4">
+<li>提交本次修改</li>
+</ol>
+<ul>
+<li>git commit -m  “提交说明”</li>
+<li>如果是第一次提交，还要设置邮箱和用户名</li>
+</ul>
+</li>
+<li><ol start="5">
+<li>重复2,3,4</li>
+<li>通过git log来观察每次的提交信息。</li>
+</ol>
+</li>
+</ul>
+<h2 id="git三个工作区域"><a href="#git三个工作区域" class="headerlink" title="git三个工作区域"></a>git三个工作区域</h2><ul>
+<li>工作区<ul>
+<li>用户操作文件的区域</li>
+</ul>
+</li>
+<li>暂存区<ul>
+<li><code>git add 文件名</code>  。 把对文件的修改加入暂存区</li>
+</ul>
+</li>
+<li>仓库<ul>
+<li><code>git commit -m &quot;提交说明&quot;</code> 。把暂存区的内容，放入仓库 ，产生新版本。</li>
+</ul>
+</li>
+</ul>
+<h2 id="git文件的四种状态"><a href="#git文件的四种状态" class="headerlink" title="git文件的四种状态"></a>git文件的四种状态</h2><ul>
+<li>未跟踪（Untracked）。这个文件对于git来说是新的。从来没有add过。git不会对它进行文件管理。</li>
+<li>已暂存。通过add命令。</li>
+<li>已提交。通过commit命令。</li>
+<li>已修改。提交commit之后，又编辑了。</li>
+</ul>
+<h2 id="git的后悔药"><a href="#git的后悔药" class="headerlink" title="git的后悔药"></a>git的后悔药</h2><ul>
+<li><p>只在工作区修改了，但没有add。</p>
+<ul>
+<li><code>git checkout -- filename.txt</code></li>
+</ul>
+</li>
+<li><p>工作区修改了，也add了。</p>
+<ul>
+<li>git reset HEAD filename.txt</li>
+<li>git checkout – filename.txt</li>
+</ul>
+</li>
+<li><p>add,commit之后，就进入仓库</p>
+<p>从仓库中恢复：</p>
+<ul>
+<li>知道commitID . <code>git log --oneline</code></li>
+<li>git checkout commitID filename.txt</li>
+<li>注意：通过 git status ,检查是否干净”nothing to commit, working tree clean”，如果不是，需要再次commit。</li>
+</ul>
+</li>
+</ul>
+<h2 id="git分支管理"><a href="#git分支管理" class="headerlink" title="git分支管理"></a>git分支管理</h2><ul>
+<li><p>git init 就有master分支</p>
+</li>
+<li><p>git checkout -b dev； 创建并切换分支 dev</p>
+</li>
+<li><p>master 分支不做开发。只用来merge。</p>
+</li>
+<li><p>开发建立dev分支。如果新功能也要合并到master.</p>
+</li>
+<li><p>修复bug，从master拉一个新的分支（一般会用bug12132命名），修复bug结束，</p>
+</li>
+<li><p>切回master，从master去merge dug分支。</p>
+</li>
+</ul>
+<h2 id="git合并分支时的冲突"><a href="#git合并分支时的冲突" class="headerlink" title="git合并分支时的冲突"></a>git合并分支时的冲突</h2><ul>
+<li>多个分支修改了相同的文件，无法自动合并。</li>
+<li>手动解决冲突<ul>
+<li>解决冲突之后，要commit</li>
+</ul>
+</li>
+</ul>
+<h2 id="git使用分支的基本流程"><a href="#git使用分支的基本流程" class="headerlink" title="git使用分支的基本流程"></a>git使用分支的基本流程</h2><p>在项目开发过程中，我们至少会接触三个分支：</p>
+<ul>
+<li><p>名为master的主分支</p>
+<p>master分支表示稳定的，可以正常运行的主分支。在我们初始化git时，它就会自动被创建。</p>
+</li>
+<li><p>名为dev的开发分支</p>
+<p>开发中，我们一般会新建一个名为 dev的分支(dev是development的简写，表示开发)，在这个基础上进行开发，测试，然后合并到master分支上。当然了，名字也不一定必须是dev。</p>
+</li>
+<li><p>名为bug的临时分支。</p>
+</li>
+</ul>
+<h2 id="github基本操作"><a href="#github基本操作" class="headerlink" title="github基本操作"></a>github基本操作</h2><ul>
+<li><p>创建一个仓库</p>
+</li>
+<li><p>clone 到本地</p>
+<p><code>git clone  https://github.com/yanwanpeng666/learngit.git</code></p>
+</li>
+<li><p>本地正常操作</p>
+<ul>
+<li>git add </li>
+<li>git commit</li>
+</ul>
+</li>
+<li><p>同步到github</p>
+</li>
+<li><p>git push(是否有权限)</p>
+</li>
+<li><p>从远程github拉取代码</p>
+<ul>
+<li>git pull</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
-                <div class="archive-post">
-    <a href="/2019/09/19/hello-world/">
-        <span class="archive-date">
-            Sep 2019
-        </span>
-        Hello World
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/09/19/ajax/">
-        <span class="archive-date">
-            Sep 2019
-        </span>
-        Untitled
-    </a>
-</div>
-            
         </section>
+
     </div>
 </div>
+
 
 </div>
 
