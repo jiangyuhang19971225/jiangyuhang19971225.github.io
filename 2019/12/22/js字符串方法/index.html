@@ -1,0 +1,231 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+  <title> [ Hexo ]</title>
+  <!-- bootstrapcss文件 -->
+ <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!--   <link rel="stylesheet" href="/css/zhl.css">
+ -->
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/fork-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/zhl.css">
+    
+  
+  
+</head></html>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div id="wrap" class="col-md-12">
+    <div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="/">
+		Hexo
+	</a>
+	</h1>
+	
+	</div>
+	<div id="header-right">
+		
+		
+		<a href="/"  title="home"><i class="fa fa-home ">home</i></a>
+		
+		<a href="https://github.com/lizehongss/demo_show"  title="demo"><i class="fa fa-code ">demo</i></a>
+		
+		<a href="/about"  title="about"><i class="fa fa-user ">about</i></a>
+		
+		<a href="/"  title="music"><i class="fa fa-music ">music</i></a>
+		
+		
+	</div>
+</div>
+
+  </div>
+  </div>
+  <div id="content" class="row">
+    <div id="content-left" class="col-md-4">
+      
+
+	
+
+	
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-archive">归档</h3>
+		<div class="widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">13</span></li></ul>
+		</div>
+	</div>
+
+
+
+    </div>
+    <div id="content-right" class="col-md-8">
+    
+<article id="post">
+	<div class="post-title">
+  <h1></h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2019-12-22</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <h4 id="1-concat"><a href="#1-concat" class="headerlink" title="1 concat"></a><strong>1 concat</strong></h4><p>将两个或多个字符的文本<strong>组合</strong>起来，返回一个新的字符串。</p>
+<blockquote>
+<p>var a = “hello”;</p>
+<p>var b = “,world”;</p>
+<p>var c = a.concat(b);</p>
+<p>alert(c);</p>
+<p>//c = “hello,world”</p>
+</blockquote>
+<h4 id="2-indexOf"><a href="#2-indexOf" class="headerlink" title="2 indexOf"></a><strong>2 indexOf</strong></h4><p>返回字符串中一个子串第一处出现的<strong>索引</strong>（从左到右搜索）。如果没有匹配项，返回 -1 。</p>
+<blockquote>
+<p>var index1 = a.indexOf(“l”);</p>
+<p>//index1 = 2</p>
+<p>var index2 = a.indexOf(“l”,3);</p>
+<p>//index2 = 3</p>
+</blockquote>
+<h4 id="3-charAt"><a href="#3-charAt" class="headerlink" title="3 charAt"></a><strong>3 charAt</strong></h4><p>返回<strong>指定位置的字符</strong>。</p>
+<blockquote>
+<p>var get_char = a.charAt(0);</p>
+<p>//get_char = “h”</p>
+</blockquote>
+<h4 id="4-lastIndexOf"><a href="#4-lastIndexOf" class="headerlink" title="4 lastIndexOf"></a><strong>4 lastIndexOf</strong></h4><p>返回字符串中一个子串<strong>最后一处出现的索引</strong>（从右到左搜索），如果没有匹配项，返回 -1 。</p>
+<blockquote>
+<p>var index1 = lastIndexOf(‘l’);</p>
+<p>//index1 = 3</p>
+<p>var index2 = lastIndexOf(‘l’,2)</p>
+<p>//index2 = 2</p>
+</blockquote>
+<h4 id="5-match"><a href="#5-match" class="headerlink" title="5 match"></a><strong>5 match</strong></h4><p>检查一个字符串<strong>匹配一个正则表达式</strong>内容，如果么有匹配返回 null。</p>
+<blockquote>
+<p>var re = new RegExp(/^\w+$/);</p>
+<p>var is_alpha1 = a.match(re);</p>
+<p>//is_alpha1 = “hello”</p>
+<p>var is_alpha2 = b.match(re);</p>
+<p>//is_alpha2 = null </p>
+</blockquote>
+<h4 id="6-substring"><a href="#6-substring" class="headerlink" title="6 substring"></a>6 substring</h4><p>返回字符串的一个子串，传入参数是<strong>起始位置和结束位置</strong>。</p>
+<blockquote>
+<p>var sub_string1 = a.substring(1);</p>
+<p>//sub_string1 = “ello”</p>
+<p>var sub_string2 = a.substring(1,4);</p>
+<p>//sub_string2 = “ell”</p>
+</blockquote>
+<h4 id="7-substr"><a href="#7-substr" class="headerlink" title="7 substr"></a>7 substr</h4><p>返回字符串的一个子串，传入参数是起始位置和长度</p>
+<blockquote>
+<p>var sub_string1 = a.substr(1);</p>
+<p>//sub_string1 = “ello”</p>
+<p>var sub_string2 = a.substr(1,4);</p>
+<p>//sub_string2 = “ello”</p>
+</blockquote>
+<h4 id="8-replace"><a href="#8-replace" class="headerlink" title="8 replace"></a>8 replace</h4><p>用来查找匹配一个<strong>正则表达式的字符串</strong>，然后使用新字符串代替匹配的字符串。</p>
+<blockquote>
+<p>var result1 = a.replace(re,”Hello”);</p>
+<p>//result1 = “Hello”</p>
+<p>var result2 = b.replace(re,”Hello”);</p>
+<p>//result2 = “,world”</p>
+</blockquote>
+<h4 id="9-search"><a href="#9-search" class="headerlink" title="9 search"></a>9 search</h4><p>执行一个正则表达式匹配查找。如果查找成功，返回字符串中匹配的索引值。否则返回 -1 。</p>
+<blockquote>
+<p>var index1 = a.search(re);</p>
+<p>//index1 = 0</p>
+<p>var index2 = b.search(re);</p>
+<p>//index2 = -1</p>
+</blockquote>
+<h4 id="10-slice"><a href="#10-slice" class="headerlink" title="10 slice"></a>10 slice</h4><p>提取字符串的一部分，并返回一个新字符串（与 substring 相同）。</p>
+<blockquote>
+<p>var sub_string1 = a.slice(1);</p>
+<p>//sub_string1 = “ello”</p>
+<p>var sub_string2 = a.slice(1,4);</p>
+<p>//sub_string2 = “ell”</p>
+</blockquote>
+<h4 id="11-split"><a href="#11-split" class="headerlink" title="11 split"></a>11 split</h4><p>通过将字符串划分成子串，将一个字符串做成一个字符串数组。</p>
+<blockquote>
+<p>var arr1 = a.split(“”);</p>
+<p>//arr1 = [h,e,l,l,o]</p>
+</blockquote>
+<h4 id="12-length"><a href="#12-length" class="headerlink" title="12 length"></a>12 length</h4><p>返回字符串的长度，所谓字符串的长度是指其包含的字符的个数。</p>
+<blockquote>
+<p>var len = a.length();</p>
+<p>//len = 5</p>
+</blockquote>
+<h4 id="13-toLowerCase"><a href="#13-toLowerCase" class="headerlink" title="13 toLowerCase"></a>13 toLowerCase</h4><p>将整个字符串转成小写字母。</p>
+<blockquote>
+<p>var lower_string = a.toLowerCase();</p>
+<p>//lower_string = “hello”</p>
+</blockquote>
+<h4 id="14-toUpperCase"><a href="#14-toUpperCase" class="headerlink" title="14 toUpperCase"></a>14 toUpperCase</h4><p>将整个字符串转成大写字母。</p>
+<blockquote>
+<p>var upper_string = a.toUpperCase();</p>
+<p>//upper_string = “HELLO”</p>
+</blockquote>
+<p>作者：丶温瞳<br>链接：<a href="https://www.jianshu.com/p/55f0a9ee8068" target="_blank" rel="noopener">https://www.jianshu.com/p/55f0a9ee8068</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+	</div>
+</article>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div id="bottom" class="col-md-12"> 
+  <div class="bottom-nav">
+	
+	
+	<a href="https://github.com/lizehongss" class="fa fa-github fa-2x" target="_blank" title="Follow me" ></a>
+	
+	
+</div>
+<div class="bottom-info">
+	&copy; 2019 John Doe<br>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	theme <a href="https://github.com/lizehongss/hexo-theme-zhl" target="_blank">zhl</a>
+</div>
+</div>
+</div>
+</div>
+<div id="tool">
+  <ul>
+    <li class="fa fa-angle-up top" id="top"></li>
+  </ul>
+</div>
+  <div class="bg_content">
+    <canvas id="canvas"></canvas>
+  </div>
+  
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/zhl.js"></script>
+  
+    <script src="/js/bj.js"></script>
+  
+
+<!-- jQ cdn  -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js cdn-->
+<!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</body>
+</html>
