@@ -1,0 +1,309 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+  <title> [ Hexo ]</title>
+  <!-- bootstrapcss文件 -->
+ <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!--   <link rel="stylesheet" href="/css/zhl.css">
+ -->
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/fork-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/zhl.css">
+    
+  
+  
+</head></html>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div id="wrap" class="col-md-12">
+    <div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="/">
+		Hexo
+	</a>
+	</h1>
+	
+	</div>
+	<div id="header-right">
+		
+		
+		<a href="/"  title="home"><i class="fa fa-home ">home</i></a>
+		
+		<a href="https://github.com/lizehongss/demo_show"  title="demo"><i class="fa fa-code ">demo</i></a>
+		
+		<a href="/about"  title="about"><i class="fa fa-user ">about</i></a>
+		
+		<a href="/"  title="music"><i class="fa fa-music ">music</i></a>
+		
+		
+	</div>
+</div>
+
+  </div>
+  </div>
+  <div id="content" class="row">
+    <div id="content-left" class="col-md-4">
+      
+
+	
+
+	
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-archive">归档</h3>
+		<div class="widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">15</span></li></ul>
+		</div>
+	</div>
+
+
+
+    </div>
+    <div id="content-right" class="col-md-8">
+    
+<article id="post">
+	<div class="post-title">
+  <h1></h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2020-05-08</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <h2 id="浏览器查看代号及版本号信息"><a href="#浏览器查看代号及版本号信息" class="headerlink" title="浏览器查看代号及版本号信息"></a>浏览器查看代号及版本号信息</h2><h3 id="查询产品代号"><a href="#查询产品代号" class="headerlink" title="查询产品代号"></a>查询产品代号</h3><p>navigator.appCodeName</p>
+<h3 id="查询版本信息"><a href="#查询版本信息" class="headerlink" title="查询版本信息"></a>查询版本信息</h3><p>navigator.appVersion</p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><ul>
+<li>闭包的本质是一个函数</li>
+<li>闭包可以访问函数内部变量</li>
+<li>闭包的存在会使内部变量保留在内存中</li>
+</ul>
+<p>缺点:</p>
+<p>内存泄漏 ,可以手动的赋值为null</p>
+<h3 id="闭包的应用"><a href="#闭包的应用" class="headerlink" title="闭包的应用"></a>闭包的应用</h3><h4 id="模仿块级作用域"><a href="#模仿块级作用域" class="headerlink" title="模仿块级作用域"></a>模仿块级作用域</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//核心代码</span></span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;<span class="number">3</span>; i++) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)()</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 现在，作用域外无法访问到i了</span></span><br><span class="line">    <span class="built_in">console</span>.log(i)<span class="comment">//underfined</span></span><br><span class="line">&#125;</span><br><span class="line">A();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Vue-nextTick"><a href="#Vue-nextTick" class="headerlink" title="Vue.nextTick()"></a>Vue.nextTick()</h2><p>比如你在Vue生命周期的created()钩子函数进行的DOM操作一定要放在Vue.nextTick()的回调函数中。原因是什么呢，原因是在created()钩子函数执行的时候DOM 其实并未进行任何渲染，而此时进行DOM操作无异于徒劳，所以此处一定要将DOM操作的js代码放进Vue.nextTick()的回调函数中。</p>
+<h2 id="vue事件修饰符详解"><a href="#vue事件修饰符详解" class="headerlink" title="vue事件修饰符详解"></a>vue事件修饰符详解</h2><p>   vue提倡的是在方法中只有对数据的处理，所以提供了事件修饰符用于DOM的事件处理，常用的事件修饰符有以下几个：</p>
+<p>（１）. stop：阻止冒泡（通俗讲就是阻止事件向上级DOM元素传递）</p>
+<p>​            <img src="C:%5CUsers%5CJIANG%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200412162751745.png" alt="image-20200412162751745"></p>
+<pre><code>点击内层div的结果：</code></pre><p>​                                </p>
+<pre><code>点击外层div的结果：</code></pre><p>​                                </p>
+<pre><code>修改代码，为内层点击事件添加事件&quot;.stop&quot;修饰符：</code></pre><p>​                </p>
+<pre><code>再次点击内层div的结果如下：
+
+        。</code></pre><p>（２）. prevent：阻止默认事件的发生</p>
+<pre><code>默认事件指对DOM的操作会引起自动执行的动作，比如点击超链接的时候会进行页面的跳转，点击表单提交按钮时会               重新加载页面等，使用&quot;.prevent&quot;修饰符可以阻止这些事件的发生。</code></pre><p>​            <img src="C:%5CUsers%5CJIANG%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200412162814671.png" alt="image-20200412162814671"></p>
+<pre><code>此时点击超链接不会进行页面的跳转。</code></pre><p>（３）. capture：捕获冒泡，即有冒泡发生时，有该修饰符的dom元素会先执行，如果有多个，从外到内依次执行，然后再按自               然顺序执行触发的事件。</p>
+<p>​            <img src="C:%5CUsers%5CJIANG%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200412162839155.png" alt="image-20200412162839155"></p>
+<p>​               </p>
+<pre><code>（４）. self：将事件绑定到自身，只有自身才能触发，通常用于避免冒泡事件的影响</code></pre><p>​                    <img src="C:%5CUsers%5CJIANG%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200412162853955.png" alt="image-20200412162853955">      </p>
+<pre><code>（５）. once：设置事件只能触发一次，比如按钮的点击等。
+
+（６）. passive：该修饰符大概意思用于对DOM的默认事件进行性能优化，根据官网的例子比如超出最大范围的滚动条滚动的             方法，可以使用该修饰符进行加强，但是效果并没有感觉到，如果有实际使用过的小伙伴可以留言补充。</code></pre><p>————</p>
+<h2 id="改变locslhost端口号和"><a href="#改变locslhost端口号和" class="headerlink" title="改变locslhost端口号和"></a>改变locslhost端口号和</h2><p>路由代码中添加mode：’history’</p>
+<p>在new Router()的下一行添加上：mode: ‘history’,</p>
+<p><a href="https://www.cnblogs.com/libo0125ok/p/9593741.html" target="_blank" rel="noopener">https://www.cnblogs.com/libo0125ok/p/9593741.html</a></p>
+<p>找到项目对应的 config 文件夹里的 index.js ,此时可以看到项目配置了 port:8080</p>
+<p><a href="https://www.cnblogs.com/atjinna/p/6907369.html" target="_blank" rel="noopener">https://www.cnblogs.com/atjinna/p/6907369.html</a></p>
+<p><img src="https://images2015.cnblogs.com/blog/1046492/201705/1046492-20170526103959122-581681556.png" alt="img"></p>
+<h2 id="import-link"><a href="#import-link" class="headerlink" title="@import link"></a>@import link</h2><p>差别:<strong>加载顺序</strong></p>
+<ul>
+<li>link会引用的css同时加载</li>
+<li>@import引用的会等到页面加载完在加载</li>
+</ul>
+<p>​         <strong>兼容问题:</strong></p>
+<ul>
+<li>@import兼容IE5以上 </li>
+<li>link无此问题</li>
+</ul>
+<p>@import不是dom可控制</p>
+<h2 id="lot-scope-”scope”"><a href="#lot-scope-”scope”" class="headerlink" title="lot-scope=”scope”"></a>lot-scope=”scope”</h2><h2 id="在el-table的某一行中循环输出-scope-row和v-for"><a href="#在el-table的某一行中循环输出-scope-row和v-for" class="headerlink" title="在el-table的某一行中循环输出 scope.row和v-for"></a>在el-table的某一行中循环输出 scope.row和v-for</h2><p>这是数据</p>
+<p>guardianName中还有个数组，如果直接输出，无异于挑战自己的审美。<br>–问题–<br>要在表格中某一行中使用v-for循环输出，但是前提是要先获取这一行的数据 这就要用到scope.row<br>–解决方法–<br>举个栗子：<br>这时候scope.row代表的就是表格一行的数据，想要输出stuNamee,就写<br>再举个栗子：<br>如果我要循环输出guardianName的数组，那就要循环输出的那一列中建立组建template，<br>设置slot-scope=“scope”，””里面是名字  scope12345都可以<br>然后在template写个div,span都可以，用来承载v-for语句，<br>然后在这个例如el-button-group上承载v-for语句</p>
+<p>原文链接：<a href="https://blog.csdn.net/qq_36888550/article/details/79666679" target="_blank" rel="noopener">https://blog.csdn.net/qq_36888550/article/details/79666679</a></p>
+<h2 id="改变函数内部this-指向"><a href="#改变函数内部this-指向" class="headerlink" title="改变函数内部this 指向"></a>改变函数内部this 指向</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JavaScript 为我们专门提供了一些函数方法来帮我们更优雅的处理函数内部this 的指向问题，常用的有bind()、call()、apply() 三种方法。</span><br></pre></td></tr></table></figure>
+
+<p>call 方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">call() 方法调用一个对象。简单理解为调用函数的方式，但是它可以改变函数的this 指向。</span><br><span class="line"></span><br><span class="line">fun.call(thisArg, arg1, arg2, ...)</span><br><span class="line">thisArg：在fun 函数运行时指定的this 值</span><br><span class="line"></span><br><span class="line">arg1，arg2：传递的其他参数</span><br><span class="line"></span><br><span class="line">返回值就是函数的返回值，因为它就是调用函数</span><br><span class="line"></span><br><span class="line">function Father () &#123;this&#125;</span><br><span class="line">function Son () &#123; Father.call(this,1,2) &#125;</span><br><span class="line"></span><br><span class="line">因此当我们想改变this 指向，同时想调用这个函数的时候，可以使用call，比如继承</span><br></pre></td></tr></table></figure>
+
+<h3 id="apply-方法"><a href="#apply-方法" class="headerlink" title="apply 方法"></a>apply 方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">fun.apply(thisArg, [argsArray]):调用函数</span><br><span class="line"></span><br><span class="line">thisArg：在fun函数运行时指定的this值</span><br><span class="line"></span><br><span class="line">argsArray：传递的值，必须包含在数组里面</span><br><span class="line"></span><br><span class="line">返回值就是函数的返回值，因为它就是调用函数</span><br><span class="line"></span><br><span class="line">因此apply 主要跟数组有关系，比如使用Math.max() 求数组的最大值</span><br><span class="line"></span><br><span class="line">var obj = &#123;name : &apos;张三丰&apos;&#125;</span><br><span class="line">	function fn (arr) &#123;</span><br><span class="line">		console.log(this);</span><br><span class="line">		console.log(arr);</span><br><span class="line">		console.log(arr2);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	//#################################################</span><br><span class="line">	var arr = [23,45,56,23,54];</span><br><span class="line"></span><br><span class="line">	var n = Math.max.apply(null,arr);</span><br><span class="line"></span><br><span class="line">	console.log(n);</span><br></pre></td></tr></table></figure>
+
+<h3 id="bind-方法"><a href="#bind-方法" class="headerlink" title="bind 方法"></a>bind 方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">bind() 方法不会调用函数。但是能改变函数内部this 指向</span><br><span class="line"></span><br><span class="line">fun.bind(thisArg, arg1, arg2, ...)</span><br><span class="line"></span><br><span class="line">thisArg：在fun 函数运行时指定的this 值</span><br><span class="line"></span><br><span class="line">arg1，arg2：传递的其他参数</span><br><span class="line"></span><br><span class="line">返回由指定的this 值和初始化参数改造的原函数拷贝</span><br><span class="line"></span><br><span class="line">因此当我们只是想改变this 指向，并且不想调用这个函数的时候，可以使用bind</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var btn = document.querySelector(&apos;input&apos;);</span><br><span class="line"></span><br><span class="line">		btn.onclick = function () &#123;</span><br><span class="line">			this.disabled = true;</span><br><span class="line">			window.setTimeout(function () &#123;</span><br><span class="line">				this.disabled = false;</span><br><span class="line">			&#125;.bind(btn),2000);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="call-apply-bind-总结"><a href="#call-apply-bind-总结" class="headerlink" title="call  apply  bind 总结"></a>call  apply  bind 总结</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fun.call(obj,arg1,arg2......);</span><br><span class="line">fun.apply(obj,[a,b,c])</span><br><span class="line">fun.bind(obj,arg1,arg2......);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">相同点:  都可以改变函数内部的this指向.</span><br><span class="line"></span><br><span class="line">区别点:  </span><br><span class="line">1.call 和apply  会调用函数, 并且改变函数内部this指向.</span><br><span class="line">2.call 和apply 传递的参数不一样, call 传递参数aru1, aru2..形式apply 必须数组形式[arg]</span><br><span class="line">3.bind  不会调用函数, 可以改变函数内部this指向</span><br><span class="line"></span><br><span class="line">主要应用场景:  </span><br><span class="line">1.call 经常做继承. </span><br><span class="line">2.apply 经常跟数组有关系.比如借助于数学对象实现数组最大值最小值</span><br><span class="line">3.bind  不调用函数,但是还想改变this指向. 比如改变定时器内部的this指向</span><br></pre></td></tr></table></figure>
+
+<h2 id="jsonstringify-JSON-parse"><a href="#jsonstringify-JSON-parse" class="headerlink" title="jsonstringify() **\JSON.parse()"></a>jsonstringify() **<em>\</em>JSON.parse()</h2><p><strong>JSON.stringify()的作用是将 JavaScript 对象转换为 JSON 字符串，</strong>而<strong><em>\</em>JSON.parse()可以将JSON字符串转为一个对象。**</strong></p>
+<p><a href="https://www.cnblogs.com/echolun/p/9631836.html" target="_blank" rel="noopener">https://www.cnblogs.com/echolun/p/9631836.html</a></p>
+<h2 id="split"><a href="#split" class="headerlink" title="split"></a>split</h2><p>把一个字符串分割成字符串数组:</p>
+<p>var str=”How are you doing today?”;<br>var n=str.split(“ “);</p>
+<p><em>n</em> 输出一个数组的值:</p>
+<p>How,are,you,doing,today?</p>
+<h2 id="jQuery-attr-方法"><a href="#jQuery-attr-方法" class="headerlink" title="jQuery attr() 方法"></a>jQuery attr() 方法</h2><p>设置图像的 width 属性：</p>
+<p>$(“button”).click(function(){    $(“img”).attr(“width”,”500”); });</p>
+<h2 id="js中split-slice-splice-join-的区别"><a href="#js中split-slice-splice-join-的区别" class="headerlink" title="js中split(),slice(),splice(),join()的区别"></a>js中split(),slice(),splice(),join()的区别</h2><p>split()  分割           <strong>字符串变数组</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mystr=<span class="string">"qingchenghuwoguoxiansheng,woaishenghuo,woaiziji"</span>;</span><br><span class="line"><span class="keyword">var</span> arr1=mystr.<span class="built_in">split</span>(<span class="string">","</span>);  <span class="comment">//console.log(arr1)  </span></span><br><span class="line"><span class="keyword">var</span> arr2=mystr.<span class="built_in">split</span>(<span class="string">""</span>);     <span class="comment">//console.log(arr2)</span></span><br></pre></td></tr></table></figure>
+
+<p>slice() 截取</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">"Hello world!"</span>; </span><br><span class="line"><span class="keyword">var</span> n=str.slice(<span class="number">1</span>,<span class="number">5</span>);</span><br><span class="line"><span class="comment">//console.log(n)</span></span><br><span class="line"><span class="comment">//ello</span></span><br></pre></td></tr></table></figure>
+
+<p>splice()  向/从数组中添加/删除并返回新的参数</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>];</span><br><span class="line"><span class="built_in">console</span>.log(s.splice(<span class="number">2</span>,<span class="number">1</span>)); <span class="comment">// 打印["c"]</span></span><br><span class="line"><span class="built_in">console</span>.log(s); <span class="comment">// 打印["a", "b"]</span></span><br></pre></td></tr></table></figure>
+
+<p>join() 方法用于把数组中的所有元素放入一个字符串。</p>
+<p><strong>数组字符串</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>)</span><br><span class="line">　　arr[<span class="number">0</span>] = <span class="string">"George"</span></span><br><span class="line">　　arr[<span class="number">1</span>] = <span class="string">"John"</span></span><br><span class="line">　　arr[<span class="number">2</span>] = <span class="string">"Thomas"</span></span><br><span class="line">　　<span class="keyword">var</span> str=arr.join(<span class="string">','</span>);</span><br><span class="line">　　<span class="built_in">console</span>.log(str);</span><br></pre></td></tr></table></figure>
+
+<p>作者：五四青年_4e7d<br>链接：<a href="https://www.jianshu.com/p/6fc01d198c83" target="_blank" rel="noopener">https://www.jianshu.com/p/6fc01d198c83</a><br>来源：简书</p>
+<h2 id="vue-打印功能-vue-print-nb"><a href="#vue-打印功能-vue-print-nb" class="headerlink" title="vue 打印功能 vue-print-nb"></a>vue 打印功能 vue-print-nb</h2><p>1、安装 npm install vue-print-nb –save</p>
+<p>2、在main导入并注册：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import Print from &apos;vue-print-nb&apos;</span><br><span class="line">Vue.use(Print)</span><br></pre></td></tr></table></figure>
+
+<p>3、使用：</p>
+<div id="printDiv">打印的内容</div>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-print</span>=<span class="string">"'#printDiv'"</span>&gt;</span>打印<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果</p>
+<h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><p>介绍在前后分离的项目开发中，调用后端的接口时难免会遇到跨域。通过Vue-CLI配置反向代理可以解决跨域。注：此方法只适用于本地开发。如发布到生产环境接口与前端在不同域，需服务器配置代理。配置方法打开项目中， config/index.js在module.exports配…</p>
+<p>打开项目中， config/index.js</p>
+<p>在module.exports配置对象的dev属性中增加</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">proxyTable: &#123;</span><br><span class="line">    <span class="string">'/master'</span>:&#123;</span><br><span class="line">        target:<span class="string">"http://domain.com/"</span>,</span><br><span class="line">        changeOrigin:<span class="literal">true</span>,</span><br><span class="line">        pathRewrite:&#123;</span><br><span class="line">            <span class="string">'^/master'</span>:<span class="string">'/master'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>说明</strong></p>
+<p>‘/master’ 这个代理配置的名称</p>
+<p>target : 后端接口的主机地址</p>
+<p>changeOrigin : 是否开启代理 </p>
+<p>pathRewrite:{ ‘^/master1’ : ‘/master2’ } 其中 ‘^/master1’表示以/master1开始的接口，需要代理，并将其改写为/master。</p>
+<p><a href="http://www.ccued.com/post/47.html" target="_blank" rel="noopener">http://www.ccued.com/post/47.html</a></p>
+<h2 id="vue2-0-element-UI-中-el-table-数据导出Excel"><a href="#vue2-0-element-UI-中-el-table-数据导出Excel" class="headerlink" title="vue2.0 + element UI 中 el-table 数据导出Excel"></a>vue2.0 + element UI 中 el-table 数据导出Excel</h2><p><a href="https://blog.csdn.net/bamboozjy/article/details/84636862" target="_blank" rel="noopener">https://blog.csdn.net/bamboozjy/article/details/84636862</a>  csdn</p>
+<p><strong>简书<a href="https://www.jianshu.com/p/1971fc5b97ca" target="_blank" rel="noopener">https://www.jianshu.com/p/1971fc5b97ca</a></strong></p>
+<p><strong>实现效果</strong></p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/4242443-e00dadc98116ef9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p>页面截图</p>
+<p><strong>点击“点击导出”按钮后下载sheetjs.xlsx文件（导出文件）</strong></p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/4242443-c5f44a37f2ff2500.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p>sheetjs.xlsx文件截图</p>
+<p><strong>Element组件库中的el-table表格导出需要的主要是两个依赖:(xlsx 和 file-saver)</strong></p>
+<ul>
+<li>安装</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save xlsx file-saver</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>两个插件的详细地址在下面</li>
+</ul>
+<blockquote>
+<p><a href="https://github.com/SheetJS/js-xlsx" target="_blank" rel="noopener">https://github.com/SheetJS/js-xlsx</a><br> <a href="https://github.com/eligrey/FileSaver.js" target="_blank" rel="noopener">https://github.com/eligrey/FileSaver.js</a></p>
+</blockquote>
+<p><strong>代码部分(有注释解释说明)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&lt;div class=&quot;table&quot;&gt;</span><br><span class="line">    &lt;!--给表格添加一个id，导出文件事件需要使用--&gt;</span><br><span class="line">    &lt;el-table</span><br><span class="line">    :data=&quot;tableData&quot;</span><br><span class="line">    border</span><br><span class="line">    style=&quot;width: 100%&quot;</span><br><span class="line">    id=&quot;out-table&quot;</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;el-table-column</span><br><span class="line">        prop=&quot;date&quot;</span><br><span class="line">        label=&quot;日期&quot;</span><br><span class="line">        width=&quot;180&quot;</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;/el-table-column&gt;</span><br><span class="line">    &lt;el-table-column</span><br><span class="line">        prop=&quot;name&quot;</span><br><span class="line">        label=&quot;姓名&quot;</span><br><span class="line">        width=&quot;180&quot;</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;/el-table-column&gt;</span><br><span class="line">    &lt;el-table-column</span><br><span class="line">        prop=&quot;address&quot;</span><br><span class="line">        label=&quot;地址&quot;</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;/el-table-column&gt;</span><br><span class="line">    &lt;/el-table&gt;</span><br><span class="line">    &lt;!--给按钮绑定事件--&gt;</span><br><span class="line">    &lt;button @click=&quot;exportExcel&quot;&gt;点击导出&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">// 引入导出Excel表格依赖</span><br><span class="line">import FileSaver from &quot;file-saver&quot;;</span><br><span class="line">import XLSX from &quot;xlsx&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">name: &quot;javascriptthree&quot;,</span><br><span class="line">data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">    tableData: [</span><br><span class="line">        &#123;</span><br><span class="line">        date: &quot;2016-05-02&quot;,</span><br><span class="line">        name: &quot;王小虎&quot;,</span><br><span class="line">        address: &quot;上海市普陀区金沙江路 1518 弄&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        date: &quot;2016-05-04&quot;,</span><br><span class="line">        name: &quot;王小虎&quot;,</span><br><span class="line">        address: &quot;上海市普陀区金沙江路 1517 弄&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        date: &quot;2016-05-01&quot;,</span><br><span class="line">        name: &quot;王小虎&quot;,</span><br><span class="line">        address: &quot;上海市普陀区金沙江路 1519 弄&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        date: &quot;2016-05-03&quot;,</span><br><span class="line">        name: &quot;王小虎&quot;,</span><br><span class="line">        address: &quot;上海市普陀区金沙江路 1516 弄&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;,</span><br><span class="line">mounted() &#123;&#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">    //定义导出Excel表格事件</span><br><span class="line">    exportExcel() &#123;</span><br><span class="line">    /* 从表生成工作簿对象 */</span><br><span class="line">    var wb = XLSX.utils.table_to_book(document.querySelector(&quot;#out-table&quot;));</span><br><span class="line">    /* 获取二进制字符串作为输出 */</span><br><span class="line">    var wbout = XLSX.write(wb, &#123;</span><br><span class="line">        bookType: &quot;xlsx&quot;,</span><br><span class="line">        bookSST: true,</span><br><span class="line">        type: &quot;array&quot;</span><br><span class="line">    &#125;);</span><br><span class="line">    try &#123;</span><br><span class="line">        FileSaver.saveAs(</span><br><span class="line">        //Blob 对象表示一个不可变、原始数据的类文件对象。</span><br><span class="line">        //Blob 表示的不一定是JavaScript原生格式的数据。</span><br><span class="line">        //File 接口基于Blob，继承了 blob 的功能并将其扩展使其支持用户系统上的文件。</span><br><span class="line">        //返回一个新创建的 Blob 对象，其内容由参数中给定的数组串联组成。</span><br><span class="line">        new Blob([wbout], &#123; type: &quot;application/octet-stream&quot; &#125;),</span><br><span class="line">        //设置导出文件名称</span><br><span class="line">        &quot;sheetjs.xlsx&quot;</span><br><span class="line">        );</span><br><span class="line">    &#125; catch (e) &#123;</span><br><span class="line">        if (typeof console !== &quot;undefined&quot;) console.log(e, wbout);</span><br><span class="line">    &#125;</span><br><span class="line">    return wbout;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">.table &#123;</span><br><span class="line">width: 100%;</span><br><span class="line">height: 300px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>作者：看到请叫我不要熬夜<br>链接：<a href="https://www.jianshu.com/p/1971fc5b97ca" target="_blank" rel="noopener">https://www.jianshu.com/p/1971fc5b97ca</a></p>
+<h2 id="vue路由懒加载"><a href="#vue路由懒加载" class="headerlink" title="vue路由懒加载"></a>vue路由懒加载</h2><p>未用懒加载  vue路由代码如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line">                <span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line">                <span class="keyword">import</span> HelloWorld <span class="keyword">from</span> <span class="string">'@/components/HelloWorld'</span></span><br><span class="line"></span><br><span class="line">                Vue.use(Router)</span><br><span class="line"></span><br><span class="line">                <span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">                  routes: [</span><br><span class="line">                    &#123;</span><br><span class="line">                      path: <span class="string">'/'</span>,</span><br><span class="line">                      name: <span class="string">'HelloWorld'</span>,</span><br><span class="line">                      component:HelloWorld</span><br><span class="line">                    &#125;</span><br><span class="line">                  ]</span><br><span class="line">                &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>异步组件实懒加载</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/'</span>,</span><br><span class="line">      name: <span class="string">'HelloWorld'</span>,</span><br><span class="line">      component: <span class="function"><span class="params">resolve</span>=&gt;</span>(<span class="built_in">require</span>([<span class="string">"@/components/HelloWorld"</span>],resolve))</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br></pre></td></tr></table></figure>
+
+<p><strong>ES 提出的import方法，（——</strong>最常用——）****</p>
+<p>　　　　方法如下：const HelloWorld = （）=&gt;import(‘需要加载的模块地址’)</p>
+<p>　　　　（不加 { } ，表示直接return）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> HelloWorld = <span class="function"><span class="params">()</span>=&gt;</span><span class="keyword">import</span>(<span class="string">"@/components/HelloWorld"</span>)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/'</span>,</span><br><span class="line">      name: <span class="string">'HelloWorld'</span>,</span><br><span class="line">      component:HelloWorld</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="vue组件懒加载"><a href="#vue组件懒加载" class="headerlink" title="vue组件懒加载"></a>vue组件懒加载</h2><p>1、原来组件中写法</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hello"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">One-com</span>&gt;</span><span class="tag">&lt;/<span class="name">One-com</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> One <span class="keyword">from</span> <span class="string">'./one'</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  components:&#123;</span><br><span class="line"><span class="javascript">    <span class="string">"One-com"</span>:One</span></span><br><span class="line">  &#125;,</span><br><span class="line">  data () &#123;</span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      msg: <span class="string">'Welcome to Your Vue.js App'</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>2、const方法</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hello"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">One-com</span>&gt;</span><span class="tag">&lt;/<span class="name">One-com</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> One = <span class="function"><span class="params">()</span>=&gt;</span><span class="keyword">import</span>(<span class="string">"./one"</span>);</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  components:&#123;</span><br><span class="line"><span class="javascript">    <span class="string">"One-com"</span>:One</span></span><br><span class="line">  &#125;,</span><br><span class="line">  data () &#123;</span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      msg: <span class="string">'Welcome to Your Vue.js App'</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>3、异步方法</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hello"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">One-com</span>&gt;</span><span class="tag">&lt;/<span class="name">One-com</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  components:&#123;</span><br><span class="line"><span class="javascript">    <span class="string">"One-com"</span>:<span class="function"><span class="params">resolve</span>=&gt;</span>([<span class="string">'./one'</span>],resolve)</span></span><br><span class="line">  &#125;,</span><br><span class="line">  data () &#123;</span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      msg: <span class="string">'Welcome to Your Vue.js App'</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>总结：</strong></p>
+<p>路由和组件的常用两种懒加载方式：</p>
+<p>1、<strong>vue异步组件实现路由懒加载</strong></p>
+<p>　　component：resolve=&gt;([‘需要加载的路由的地址’，resolve])</p>
+<p>2、<strong>es提出的import(推荐使用这种方式)</strong></p>
+<p>　　<strong>const HelloWorld = （）=&gt;import(‘需要加载的模块地址’)</strong></p>
+<h2 id="控制台报错误"><a href="#控制台报错误" class="headerlink" title="控制台报错误"></a>控制台报错误</h2><h3 id="Vue-warn-Missing-required-prop-“index”"><a href="#Vue-warn-Missing-required-prop-“index”" class="headerlink" title="[Vue warn]: Missing required prop: “index”"></a>[Vue warn]: Missing required prop: “index”</h3><p>加index属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-submenu</span> <span class="attr">index</span>&gt;</span><span class="tag">&lt;/<span class="name">el-submenu</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="es6IE"><a href="#es6IE" class="headerlink" title="es6IE"></a>es6IE</h2><h1 id="es6兼容ie"><a href="#es6兼容ie" class="headerlink" title="es6兼容ie"></a><a href="https://www.cnblogs.com/summer-qd/p/11547004.html" target="_blank" rel="noopener">es6兼容ie</a></h1><p>1、在引入其他js文件前引入以下两个文件　</p>
+<p>　　<script src="https://cdn.bootcss.com/babel-standalone/6.26.0/babel.min.js"></script>　　<script src="https://cdn.bootcss.com/babel-polyfill/7.6.0/polyfill.min.js"></script></p>
+<p>2、用到es6代码的script标签，添加type=”text/babel”</p>
+<h1 id="vue项目兼容es6语法跟IE浏览器"><a href="#vue项目兼容es6语法跟IE浏览器" class="headerlink" title="vue项目兼容es6语法跟IE浏览器"></a><a href="https://www.cnblogs.com/xiaomanong-19/p/11726090.html" target="_blank" rel="noopener">vue项目兼容es6语法跟IE浏览器</a></h1><h3 id="js文件"><a href="#js文件" class="headerlink" title="js文件"></a>js文件</h3><p>要安装babel-polyfill和es6-promise。用来兼容ie和es6；</p>
+<p>附赠链接下载：<a href="https://babeljs.io/docs/en/6.26.3/babel-polyfill；https://www.npmjs.com/package/es6-promise" target="_blank" rel="noopener">https://babeljs.io/docs/en/6.26.3/babel-polyfill；https://www.npmjs.com/package/es6-promise</a></p>
+<h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><p>先下载：npm install –save babel-polyfill  ；npm install es6-promise||yarn add es6-promise；这个根据个人是用npm下载还是yarn下载</p>
+<p>然后在main.js全局文件中引入：</p>
+<p>import ‘babel-polyfill’;</p>
+<p>import promise from ‘es6-promise’</p>
+<p>promise.polyfill();</p>
+<p>如果有错误，请指出，谢谢。感谢各路大神指引我走向光明！</p>
+<p><img src="https://img2018.cnblogs.com/blog/1757531/201910/1757531-20191023142727951-1912094811.png" alt="img"></p>
+
+	</div>
+</article>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div id="bottom" class="col-md-12"> 
+  <div class="bottom-nav">
+	
+	
+	<a href="https://github.com/lizehongss" class="fa fa-github fa-2x" target="_blank" title="Follow me" ></a>
+	
+	
+</div>
+<div class="bottom-info">
+	&copy; 2020 John Doe<br>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	theme <a href="https://github.com/lizehongss/hexo-theme-zhl" target="_blank">zhl</a>
+</div>
+</div>
+</div>
+</div>
+<div id="tool">
+  <ul>
+    <li class="fa fa-angle-up top" id="top"></li>
+  </ul>
+</div>
+  <div class="bg_content">
+    <canvas id="canvas"></canvas>
+  </div>
+  
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/zhl.js"></script>
+  
+    <script src="/js/bj.js"></script>
+  
+
+<!-- jQ cdn  -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js cdn-->
+<!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</body>
+</html>
