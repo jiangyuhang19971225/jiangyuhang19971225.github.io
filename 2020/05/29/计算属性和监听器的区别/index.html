@@ -6,7 +6,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
-  <title> [ Hexo ]</title>
+  <title>计算属性与监听器的区别 [ Hexo ]</title>
   <!-- bootstrapcss文件 -->
  <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 <!--   <link rel="stylesheet" href="/css/zhl.css">
@@ -74,7 +74,7 @@
     
 <article id="post">
 	<div class="post-title">
-  <h1></h1>
+  <h1>计算属性与监听器的区别</h1>
   	</div>
   <div class="page-meta">
   	<span class="fa-wrap">
@@ -89,8 +89,7 @@
   	</span>
   </div>
   <div class="post-content">
-  <hr>
-<h2 id="title-计算属性与监听器的区别"><a href="#title-计算属性与监听器的区别" class="headerlink" title="title:计算属性与监听器的区别"></a>title:计算属性与监听器的区别</h2><p>区别<br>计算属性是依赖的值改变会重新执行函数，计算属性是取返回值作为最新结果，所以里面不能异步的返回结果。不能写异步逻辑。</p>
+  <p>区别<br>计算属性是依赖的值改变会重新执行函数，计算属性是取返回值作为最新结果，所以里面不能异步的返回结果。不能写异步逻辑。</p>
 <p>侦听属性是侦听的值改变会重新执行函数，将一个值重新赋值作为最新结果，所以赋值的时候可以进行一些异步操作。</p>
 <p>演示<br>当一个值改变了需要1s之后显示到页面中，通过watch可以轻松的实现</p>
   <div id="app">
