@@ -79,7 +79,7 @@
   <div class="page-meta">
   	<span class="fa-wrap">
   		<i class="fa fa-clock-o"></i>
-  		<span class="date-meta">2019-12-07</span>
+  		<span class="date-meta">2020-05-29</span>
   	</span>
   	<span class="fa-wrap">
   		
@@ -89,23 +89,84 @@
   	</span>
   </div>
   <div class="post-content">
-  <h1 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h1><ul>
-<li>状态（vuex管理的数据）</li>
-<li>响应式数据</li>
-<li>生命的数据不能直接修改</li>
-</ul>
-<h3 id="vue组件-vue-components-调用-Dispatch"><a href="#vue组件-vue-components-调用-Dispatch" class="headerlink" title="vue组件(vue components)  调用(Dispatch)"></a>vue组件(vue components)  调用(Dispatch)</h3><h3 id="Actiuon发请求-拿后台（Backend-API-给数据"><a href="#Actiuon发请求-拿后台（Backend-API-给数据" class="headerlink" title="Actiuon发请求 拿后台（Backend API)给数据"></a>Actiuon发请求 拿后台（Backend API)给数据</h3><h3 id="交给Mutations修改状态"><a href="#交给Mutations修改状态" class="headerlink" title="交给Mutations修改状态"></a>交给Mutations修改状态</h3><ol>
-<li>修改状态（state)</li>
-<li>只能写同步的代码</li>
-<li>通过mutations修改的状态可以在开发工具中监听到(调试)</li>
-</ol>
-<h3 id="mutate-改变-State-驱动视图的更新-Vue组件"><a href="#mutate-改变-State-驱动视图的更新-Vue组件" class="headerlink" title="mutate(改变)State 驱动视图的更新 Vue组件"></a>mutate(改变)State 驱动视图的更新 Vue组件</h3><p><img src="C:%5CUsers%5CJIANG%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1573546534368.png" alt="1573546534368"></p>
-<ol>
-<li>state 管理数据，管理的数据是响应式的，当数据改变时驱动视图更新。</li>
-<li>mutations 更新数据，state中的数据只能使用mutations去改变数据。</li>
-<li>actions 请求数据，响应成功后把数据提交给mutations</li>
-</ol>
-<h3 id="mapState-将Stata中的数据映射到计算属性"><a href="#mapState-将Stata中的数据映射到计算属性" class="headerlink" title="mapState 将Stata中的数据映射到计算属性"></a>mapState 将Stata中的数据映射到计算属性</h3>
+  <hr>
+<h2 id="title-计算属性与监听器的区别"><a href="#title-计算属性与监听器的区别" class="headerlink" title="title:计算属性与监听器的区别"></a>title:计算属性与监听器的区别</h2><p>区别<br>计算属性是依赖的值改变会重新执行函数，计算属性是取返回值作为最新结果，所以里面不能异步的返回结果。不能写异步逻辑。</p>
+<p>侦听属性是侦听的值改变会重新执行函数，将一个值重新赋值作为最新结果，所以赋值的时候可以进行一些异步操作。</p>
+<p>演示<br>当一个值改变了需要1s之后显示到页面中，通过watch可以轻松的实现</p>
+  <div id="app">
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    <button @click="handleClick">点击</button>
+  </div>
+
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        msg: 'hello',
+        newValue: ''
+      },
+      methods: {
+        handleClick () {
+          this.msg = 'hello1'
+        }
+      },
+      watch: {
+        msg (newValue) {
+          setTimeout(() => {
+            this.newValue = newValue
+          }, 1000);
+        }
+      }
+    })
+  </script>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>使用计算属性无法在里面写一些异步逻辑</p>
+  <div id="app">
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    <button @click="handleClick">点击</button>
+  </div>
+
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        msg: 'hello',
+        temp: ''
+      },
+      computed: {
+        newValue () {
+          if (this.temp) {
+            // 不能写异步
+            // setTimeout(() => {
+            //   return msg
+            // }, 1000);
+            return this.msg
+          } else {
+            return this.temp
+          }
+        }
+      },
+      methods: {
+        handleClick () {
+          this.msg = 'hello1'
+          this.temp = 'hello1'
+        }
+      }
+    })
+  </script>
+<p>————————————————<br>版权声明：本文为CSDN博主「前端精髓」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/wu_xianqiang/article/details/89741229" target="_blank" rel="noopener">https://blog.csdn.net/wu_xianqiang/article/details/89741229</a></p>
+
 	</div>
 </article>
 
