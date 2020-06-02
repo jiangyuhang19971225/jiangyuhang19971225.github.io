@@ -1,0 +1,260 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+  <title>随记2 [ Hexo ]</title>
+  <!-- bootstrapcss文件 -->
+ <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!--   <link rel="stylesheet" href="/css/zhl.css">
+ -->
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/fork-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/zhl.css">
+    
+  
+  
+</head></html>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div id="wrap" class="col-md-12">
+    <div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="/">
+		Hexo
+	</a>
+	</h1>
+	
+	</div>
+	<div id="header-right">
+		
+		
+		<a href="/"  title="home"><i class="fa fa-home ">home</i></a>
+		
+		<a href="https://github.com/lizehongss/demo_show"  title="demo"><i class="fa fa-code ">demo</i></a>
+		
+		<a href="/about"  title="about"><i class="fa fa-user ">about</i></a>
+		
+		<a href="/"  title="music"><i class="fa fa-music ">music</i></a>
+		
+		
+	</div>
+</div>
+
+  </div>
+  </div>
+  <div id="content" class="row">
+    <div id="content-left" class="col-md-4">
+      
+
+	
+
+	
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-archive">归档</h3>
+		<div class="widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">15</span></li></ul>
+		</div>
+	</div>
+
+
+
+    </div>
+    <div id="content-right" class="col-md-8">
+    
+<article id="post">
+	<div class="post-title">
+  <h1>随记2</h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2020-06-02</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <h2 id="axios-get-url-params-参数对象"><a href="#axios-get-url-params-参数对象" class="headerlink" title="axios.get(url,{params:参数对象})"></a>axios.get(url,{params:参数对象})</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//params参数必写 , 如果没有参数传&#123;&#125;也可以</span><br></pre></td></tr></table></figure>
+
+<p>一般发送请求是这么写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'/user?id=12345&amp;name=user'</span>)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;).catch(<span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>为了方便全局统一调用封装的axios</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'/user'</span>, &#123;  <span class="comment">//params参数必写 , 如果没有参数传&#123;&#125;也可以</span></span><br><span class="line">    params: &#123; </span><br><span class="line">       id: <span class="number">12345</span>，</span><br><span class="line">       name: user</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">编辑:携带路由参数</span><br><span class="line">路由参数:query</span><br><span class="line">路由参数:params</span><br><span class="line">    动态路由</span><br></pre></td></tr></table></figure>
+
+<p>params传参还是query参数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种  query传参方式</span></span><br><span class="line"><span class="comment">// this.$router.push(`/publish?id=$&#123;id&#125;`)</span></span><br><span class="line"><span class="comment">// 第二种  query传参方式</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$router.push(&#123;path:&apos;/&apos;,query:&#123;&#125;&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">await this.$http.delete(`articles/$&#123;id&#125;`)</span><br></pre></td></tr></table></figure>
+
+<h2 id="三角形"><a href="#三角形" class="headerlink" title="三角形"></a>三角形</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.articleBg .policylistright .policylistright_title:after &#123;</span><br><span class="line">    border: 10px solid transparent;</span><br><span class="line">    border-top-color: #e81111;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 18px;</span><br><span class="line">    left: 98px;</span><br><span class="line">    content: &quot; &quot;;</span><br><span class="line">    transform: rotate(227deg);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-1-Triangle-Up"><a href="#2-1-Triangle-Up" class="headerlink" title="2.1 Triangle Up"></a><strong>2.1 Triangle Up</strong></h4><p><img src="https://www.mwcxs.top/static/upload/pics/2019/3/29UWmsYL8T8oUqP3A5RBQc7Wf4.png" alt="img">**<br>**</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#triangle-up &#123;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    border-left: 50px solid transparent;</span><br><span class="line">    border-right: 50px solid transparent;</span><br><span class="line">    border-bottom: 100px solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-2-Triangle-Down"><a href="#2-2-Triangle-Down" class="headerlink" title="2.2 Triangle Down"></a><strong>2.2 Triangle Down</strong></h4><p><img src="https://www.mwcxs.top/static/upload/pics/2019/3/29IJv7syTT0UTzXMiygBtVo6ZG.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#triangle-down &#123;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    border-left: 50px solid transparent;</span><br><span class="line">    border-right: 50px solid transparent;</span><br><span class="line">    border-top: 100px solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-3-Triangle-Left"><a href="#2-3-Triangle-Left" class="headerlink" title="2.3 Triangle Left"></a><strong>2.3 Triangle Left</strong></h4><p><img src="https://www.mwcxs.top/static/upload/pics/2019/3/29alsovh624Mb0bNQCzy5PqStS.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#triangle-left &#123;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    border-top: 50px solid transparent;</span><br><span class="line">    border-right: 100px solid red;</span><br><span class="line">    border-bottom: 50px solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-4-Triangle-Right"><a href="#2-4-Triangle-Right" class="headerlink" title="2.4 Triangle Right"></a><strong>2.4 Triangle Right</strong></h4><p><img src="https://www.mwcxs.top/static/upload/pics/2019/3/2903hZu_EHdFiIzIBE-hx9c5P7.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#triangle-right &#123;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    border-top: 50px solid transparent;</span><br><span class="line">    border-left: 100px solid red;</span><br><span class="line">    border-bottom: 50px solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-5-Triangle-Top-Left"><a href="#2-5-Triangle-Top-Left" class="headerlink" title="2.5 Triangle Top Left"></a><strong>2.5 Triangle Top Left</strong></h4><p><img src="https://www.mwcxs.top/static/upload/pics/2019/3/290aJgMTaALP0v3rkk7F-89ouQ.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#triangle-topleft &#123;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    border-top: 100px solid red;</span><br><span class="line">    border-right: 100px solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-6-Triangle-Top-Right"><a href="#2-6-Triangle-Top-Right" class="headerlink" title="2.6 Triangle Top Right"></a><strong>2.6 Triangle Top Right</strong></h4><p><img src="https://www.mwcxs.top/static/upload/pics/2019/3/29oP2ovlPPyPmuHhcREiGIMrl0.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#triangle-topright &#123;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    border-top: 100px solid red;</span><br><span class="line">    border-left: 100px solid transparent;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-7-Triangle-Bottom-Left"><a href="#2-7-Triangle-Bottom-Left" class="headerlink" title="2.7 Triangle Bottom Left"></a><strong>2.7 Triangle Bottom Left</strong></h4><p><img src="https://www.mwcxs.top/static/upload/pics/2019/3/29FH81Y4G7Uo9bPbr2NBZHJEla.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#triangle-bottomleft &#123;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    border-bottom: 100px solid red;</span><br><span class="line">    border-right: 100px solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-8-Triangle-Bottom-Right"><a href="#2-8-Triangle-Bottom-Right" class="headerlink" title="2.8 Triangle Bottom Right"></a><strong>2.8 Triangle Bottom Right</strong></h4><p><img src="https://www.mwcxs.top/static/upload/pics/2019/3/29yQ0lH6MBfsOS0wGTZIcfiBmn.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#triangle-bottomright &#123;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    border-bottom: 100px solid red;</span><br><span class="line">    border-left: 100px solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h3><p>父元素</p>
+<p>#demo{<br>　　margin: 100px;<br>　　width: 100px;<br>　　height: 100px;<br>　　border: 1px solid black;<br>　　position: relative;<br>}</p>
+<p> 伪元素</p>
+<p>#demo:before{<br>　　content:””;<br>　　width:0;<br>　　height:0;<br>　　position: absolute;<br>　　top: 34px;<br>　　left: 100px;<br>　　border-top:solid 15px transparent;<br>　　border-left:solid 15px black ;<br>　　border-bottom:solid 15px transparent;<br>}</p>
+<p><img src="https://img2018.cnblogs.com/blog/1749955/201908/1749955-20190824151325874-1288787028.jpg" alt="img"><img src="https://img2018.cnblogs.com/blog/1749955/201908/1749955-20190824151914704-970307214.jpg" alt="img"><img src="https://img2018.cnblogs.com/blog/1749955/201908/1749955-20190824152014614-1427911622.jpg" alt="img"><img src="https://img2018.cnblogs.com/blog/1749955/201908/1749955-20190824152200475-1597072145.jpg" alt="img"></p>
+<p>当修改成</p>
+<p>border-right:solid 15px transparent;<br>border-left:solid 15px transparent;<br>border-bottom:solid 15px black;</p>
+<p>下三角出现在上边线</p>
+<p>当修改成</p>
+<p>border-top:solid 15px black;<br>border-right:solid 15px transparent;<br>border-left:solid 15px transparent;</p>
+<p>小三角在下边线</p>
+<p>当修改成</p>
+<p>border-top:solid 15px transparent;<br>border-right:solid 15px black;<br>border-bottom:solid 15px transparent;</p>
+<p>小三角在左边线</p>
+<p>这个也可以做成直角三角形，改成</p>
+<p>border-right:solid 15px transparent;<br>border-bottom:solid 15px black;</p>
+<p><img src="https://img2018.cnblogs.com/blog/1749955/201908/1749955-20190824153321372-1935164401.jpg" alt="img"></p>
+<p><a href="https://www.cnblogs.com/happybread/" target="_blank" rel="noopener">平平淡淡summer</a></p>
+<h2 id="vue之this-route-params和this-route-query的区别"><a href="#vue之this-route-params和this-route-query的区别" class="headerlink" title="vue之this.$route.params和this.$route.query的区别"></a><a href="https://www.cnblogs.com/happybread/p/10156869.html" target="_blank" rel="noopener">vue之this.$route.params和this.$route.query的区别</a></h2><p>1.<strong>this.$route.query</strong>的使用</p>
+<p>A、传参数：</p>
+<p>this.$router.push({</p>
+<p>​     path: ‘/monitor’,</p>
+<p>​     query:{</p>
+<p>​        id:id,</p>
+<p>​     }</p>
+<p>}）</p>
+<p>B、获取参数：</p>
+<p>this.$route.query.id</p>
+<p>C、在url中形式（url中带参数）</p>
+<p><a href="http://172.19.186.224:8080/#/monitor?id=1" target="_blank" rel="noopener">http://172.19.186.224:8080/#/monitor?id=1</a></p>
+<p>D、<strong>页面之间用路由跳转传参时，刷新跳转后传参的页面，数据还会显示存在（项目中遇到此问题）</strong></p>
+<p>2.<strong>this.$route.params</strong>的使用</p>
+<p>A、传参数：</p>
+<p>this.$router.push({</p>
+<p>​     name: ‘monitor’,</p>
+<p>​     params:{</p>
+<p>​        id:id,</p>
+<p>​     }</p>
+<p>}）</p>
+<p>B、获取参数：</p>
+<p>this.$route.params.id</p>
+<p>C、在url中形式（url中不带参数）</p>
+<p><a href="http://172.19.186.224:8080/#/monitor" target="_blank" rel="noopener">http://172.19.186.224:8080/#/monitor</a></p>
+<p>D、<strong>页面之间用路由跳转传参时，刷新跳转后传参的页面，数据不存在（项目中遇到此问题）</strong></p>
+<h2 id="vue-router-路由动态传参-query和params的区别"><a href="#vue-router-路由动态传参-query和params的区别" class="headerlink" title="vue-router 路由动态传参 query和params的区别"></a>vue-router 路由动态传参 query和params的区别</h2><p>[<img src="https://upload.jianshu.io/users/upload_avatars/7579449/57077188-0c57-450e-9e43-904c9520e552.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/96/h/96/format/webp" alt="img"></p>
+<p>最近空闲一段时间，就没事看了看vue-router的一些知识，想起了之前做项目遇到的一些不解，也就是当初刚入门，文档看的不详细，理解的不全面导致的。现在虽然不怎么会犯这样的错误了，但是还是写下来，记录一下，也方便有需要的朋友查阅，共勉吧。如果能帮到你，那就更好了…</p>
+<p>/data/:id这个路由匹配/data/1,/data/2这里的 id 叫 params<br>/data?id=1 /data?id=2 这里的 id 叫 query</p>
+<p>当你使用params方法传参的时候，要在路由后面加参数名，并且传参的时候，参数名要跟路由后面设置的参数名对应。使用query方法，就没有这种限制，直接在跳转里面用就可以。<br>这句话怎么理解呢？看下边：<br>如果你要使用params传参，那么你的路由页面index.js必须带上参数，如下</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   path: <span class="string">'/detail/:id/'</span>,</span><br><span class="line">   name: <span class="string">"detail"</span>,</span><br><span class="line">   component: detail<span class="comment">//这个details是传进来的组件名称</span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">使用： </span><br><span class="line">方法<span class="number">1</span>：&lt;router-link :to=<span class="string">"&#123; name: 'details', params: &#123; id: 123 &#125;&#125;"</span>&gt;点击按钮&lt;/router-link&gt;</span><br><span class="line">方法<span class="number">2</span>：<span class="keyword">this</span>.$router.push(&#123;name:<span class="string">'details'</span>,<span class="keyword">params</span>:&#123;id:<span class="number">123</span>&#125;&#125;)</span><br><span class="line">页面url显示结果是：http:<span class="comment">//localhost:8081/#/details/123</span></span><br></pre></td></tr></table></figure>
+
+<p>如果你要使用query传参，那么你的路由页面index.js必须带上参数，如下</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   path: <span class="string">'/detail'</span>,<span class="comment">//这里不需要参入参数，参见上面的params写法</span></span><br><span class="line">   name: <span class="string">"detail"</span>,</span><br><span class="line">   component: detail<span class="comment">//这个details是传进来的组件名称</span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">使用： </span><br><span class="line">方法<span class="number">1</span>：&lt;router-link :to=<span class="string">"&#123; name: 'details', query: &#123; id: 123 &#125;&#125;"</span>&gt;点击按钮&lt;/router-link&gt;</span><br><span class="line">方法<span class="number">2</span>：<span class="keyword">this</span>.$router.push(&#123;name:<span class="string">'details'</span>,query:&#123;id:<span class="number">123</span>&#125;&#125;)</span><br><span class="line"></span><br><span class="line">方法<span class="number">3</span>：&lt;router-link :to=<span class="string">"&#123; path: 'details', query: &#123; id: 123 &#125;&#125;"</span>&gt;点击按钮&lt;/router-link&gt;</span><br><span class="line">方法<span class="number">4</span>：<span class="keyword">this</span>.$router.push(&#123;path:<span class="string">'details'</span>,query:&#123;id:<span class="number">123</span>&#125;&#125;)</span><br><span class="line">页面url显示结果是：http:<span class="comment">//localhost:8081/#/details?id=123</span></span><br></pre></td></tr></table></figure>
+
+<p>这里看方法3,4,其实是对应方法1,2的，也就是说使用query方法，可以与path和name共用，2个都可以，但是params只能对应name。</p>
+<p>要是想获取参数值：各自的获取方法是：<br>query和params分别是：this.$route.query.id，this.$route.params.id</p>
+<p>顺便说一些参数是多个的情况<br>params传参，如果路由index.js如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="attribute">path</span>: <span class="string">'/detail/:id/:name'</span>,</span><br><span class="line">   name: <span class="string">"detail"</span>,</span><br><span class="line">   component: detail//这个details是传进来的组件名称</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>那么跳转写法：this.$router.push({name:’detail’,params:{id:123,name:’lisi’}})<br>效果：<a href="https://link.jianshu.com/?t=http%3A%2F%2Flocalhost%3A8081%2F%23%2Fdetails%2F123%2Flisi" target="_blank" rel="noopener">http://localhost:8081/#/details/123/lisi</a><br>query的写法参考上面。</p>
+<p>query跟params，前者在浏览器地址栏中显示参数，后者则不显示。</p>
+<h2 id="VUE年月日"><a href="#VUE年月日" class="headerlink" title="VUE年月日"></a>VUE年月日</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getNowDate</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    <span class="keyword">let</span> y = date.getFullYear();</span><br><span class="line">    <span class="keyword">let</span> m = date.getMonth() + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> d = date.getDate();</span><br><span class="line">    <span class="keyword">let</span> H = Da.getHours();</span><br><span class="line">    <span class="keyword">let</span> mm = Da.getMinutes();</span><br><span class="line">    <span class="keyword">let</span> s=d.getSeconds()</span><br><span class="line">          m = m &lt; <span class="number">10</span> ? <span class="string">"0"</span> + m : m;</span><br><span class="line">          d = d &lt; <span class="number">10</span> ? <span class="string">"0"</span> + d : d;</span><br><span class="line">          H = H &lt; <span class="number">10</span> ? <span class="string">"0"</span> + H : H;</span><br><span class="line">          <span class="keyword">return</span> y + <span class="string">"-"</span> + m + <span class="string">"-"</span> + d + <span class="string">" "</span> + H + <span class="string">":"</span> + mm+<span class="string">":"</span>+s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+	</div>
+</article>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div id="bottom" class="col-md-12"> 
+  <div class="bottom-nav">
+	
+	
+	<a href="https://github.com/lizehongss" class="fa fa-github fa-2x" target="_blank" title="Follow me" ></a>
+	
+	
+</div>
+<div class="bottom-info">
+	&copy; 2020 John Doe<br>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	theme <a href="https://github.com/lizehongss/hexo-theme-zhl" target="_blank">zhl</a>
+</div>
+</div>
+</div>
+</div>
+<div id="tool">
+  <ul>
+    <li class="fa fa-angle-up top" id="top"></li>
+  </ul>
+</div>
+  <div class="bg_content">
+    <canvas id="canvas"></canvas>
+  </div>
+  
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/zhl.js"></script>
+  
+    <script src="/js/bj.js"></script>
+  
+
+<!-- jQ cdn  -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js cdn-->
+<!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</body>
+</html>
